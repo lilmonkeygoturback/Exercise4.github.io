@@ -2,93 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Frontend Developer Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">&#9632; Trương Hồng Quân</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold handwriting" href="#">Trương Hồng Quân</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Articles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <button id="toggleDarkMode" class="btn btn-dark ms-3">Dark Mode</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center my-5">
+        <h1 class="display-4 handwriting">Frontend Developer</h1>
+        <p class="lead">HTML only with proper layout, now using Bootstrap styling</p>
     </header>
 
-    <main>
-        <section class="intro">
-            <h1>Frontend Developer</h1>
-            <p class="subtitle">html only with proper layout, no styling</p>
-        </section>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row g-4">
+            <!-- Projects -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header fw-bold handwriting">Projects</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">HTML Only Portfolio</li>
+                        <li class="list-group-item">Calculator</li>
+                        <li class="list-group-item">Quiz App</li>
+                        <li class="list-group-item">Countdown Timer</li>
+                        <li class="list-group-item">Product Upcoming Page</li>
+                    </ul>
+                </div>
+            </div>
 
-        <section class="content">
-            <table>
-                <tr>
-                    <td class="projects">
-                        <h2>Projects</h2>
-                        <ul>
-                            <li>HTML Only Portfolio</li>
-                            <li>Calculator</li>
-                            <li>Quiz App</li>
-                            <li>Countdown Timer</li>
-                            <li>Product Upcoming Page</li>
-                        </ul>
-                    </td>
-                    <td class="work-experience">
-                        <h2>Work Experience</h2>
+            <!-- Work Experience -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header fw-bold handwriting">Work Experience</div>
+                    <div class="card-body">
                         <p><strong>roadmap.sh</strong><br>Solved all the frontend projects</p>
-                        <a href="#">Visit my Profile</a>
-                        <h3>OpenSource Work</h3>
-                        <p>Contributed to 50 open source projects. Made my own projects with 200 GitHub Stars.</p>
-                        <a href="#">Visit my GitHub Profile</a>
-                    </td>
-                    <td class="education">
-                        <h2>Education</h2>
-                        <p>Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</p>
-                        <h3>Courses I took:</h3>
+                        <a href="#" class="btn btn-primary btn-sm">Visit my Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header fw-bold handwriting">Education</div>
+                    <div class="card-body">
+                        <p>Graduated with 3.76/4 CGPA. Won Acme Hackathon.</p>
+                        <h6>Courses I took:</h6>
                         <ul>
                             <li>Object Oriented Programming</li>
-                            <li>Data Structures and Algorithms</li>
+                            <li>Data Structures & Algorithms</li>
                             <li>Web Engineering</li>
-                            <li>Artificial Intelligence</li>
-                            <li>Human Computer Interaction</li>
-                            <li>Computer Graphics</li>
-                            <li>Database Management Systems</li>
-                            <li>Distributed Database Systems</li>
-                            <li>Discrete Mathematics</li>
                         </ul>
-                    </td>
-                </tr>
-            </table>
-        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <section class="reviews">
-            <h2>Reviews from my Teachers</h2>
-            <div class="review-container">
-                <div class="review-card">
-                    <p>John Doe was a brilliant student; always stood out with his assignments.</p>
-                    <em>Jane Doe, Assistant Professor</em>
-                </div>
-                <div class="review-card">
-                    <p>John Doe was a brilliant student; always stood out with his assignments.</p>
-                    <em>Jane Doe, Assistant Professor</em>
-                </div>
-                <div class="review-card">
-                    <p>John Doe was a brilliant student; always stood out with his assignments.</p>
-                    <em>Jane Doe, Assistant Professor</em>
+        <!-- Contact Form -->
+        <section class="my-5">
+            <h2 class="text-center handwriting">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label" for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea id="message" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Send Message</button>
+                    </form>
                 </div>
             </div>
         </section>
-    </main>
+    </div>
 
-    <footer>
-        <p>&copy; all rights reserved 2025</p>
+    <!-- Footer -->
+    <footer class="handwriting text-center py-3 border-top">
+        &copy; All rights reserved 2025
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
